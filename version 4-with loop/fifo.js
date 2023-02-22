@@ -1,6 +1,6 @@
 const mainArray = [1, 2, 3, 4];
 
-//پاک کردن از آخر آرایه
+//delete last item from array
 function pop(arr) {
   let temp = [];
   let deleted_item;
@@ -9,14 +9,14 @@ function pop(arr) {
     temp[i] = arr[i];
   }
 
-  // آخرین عنصر از آرایه جدا شده و در متغیر جداگانه نگهداری میشود
+  //The last item of the array is separated and stored in a separate variable
   for (let j = arr.length; j >= arr.length - 1; j--) {
     deleted_item = arr[j];
   }
   return [temp, deleted_item];
 }
 
-// اضافه کردن به ابتدای آرایه
+// Add to the beginning of the array //unshift method simulated
 function unshift(arr, item) {
   let temp = [];
   temp[0] = item;
@@ -28,9 +28,5 @@ function unshift(arr, item) {
 
 let [arrayAfterPop, deletedvalue] = pop(mainArray);
 let arrayAfterUnShift = unshift(mainArray, 0);
-console.log(
-  `array after pop value is :${[arrayAfterPop]} and deleted item is ${[
-    deletedvalue,
-  ]}`
-);
+console.log(`array after pop value is :${[arrayAfterPop]} and deleted item is ${[deletedvalue]}`);
 console.log(`array after unshift value is :${arrayAfterUnShift}`);

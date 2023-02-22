@@ -23,9 +23,5 @@ function unshift(arr, ...items) {
 
 let [arrayAfterPop, deletedvalue] = pop(mainArray);
 let arrayAfterUnShift = unshift(mainArray, 0);
-console.log(
-  `array after pop value is :${[arrayAfterPop]} and deleted value is ${[
-    deletedvalue,
-  ]}`
-);
+console.log(`array after pop value is :${[arrayAfterPop]} and deleted value is ${[deletedvalue]}`);
 console.log(`array after unshift value is :${arrayAfterUnShift}`);
