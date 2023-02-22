@@ -1,32 +1,31 @@
-const mainArray = [1, 2, 3, 4];
+const mainArray = [1, 2, 3, 4, 5];
 
 //delete last item from array
-function pop(arr) {
-  let temp = [];
+function popFromLastOfArray(inputArray) {
+  let tempArray = [];
   let deleted_item;
 
-  for (let i = 0; i < arr.length - 1; i++) {
-    temp[i] = arr[i];
+  for (let i = 0; i < inputArray.length - 1; i++) {
+    tempArray[i] = inputArray[i];
   }
 
   //The last item of the array is separated and stored in a separate variable
-  for (let j = arr.length; j >= arr.length - 1; j--) {
-    deleted_item = arr[j];
-  }
-  return [temp, deleted_item];
+  deleted_item = inputArray[inputArray.length - 1];
+
+  return [tempArray, deleted_item];
 }
 
 // Add to the beginning of the array //unshift method simulated
-function unshift(arr, item) {
-  let temp = [];
-  temp[0] = item;
-  for (let i = 0; i <= arr.length; i++) {
-    temp[i + 1] = arr[i];
+function pushInFistOfArray(inputArray, item) {
+  let tempArray = [];
+  tempArray[0] = item;
+  for (let i = 0; i <= inputArray.length; i++) {
+    tempArray[i + 1] = inputArray[i];
   }
-  return temp;
+  return tempArray;
 }
 
-let [arrayAfterPop, deletedvalue] = pop(mainArray);
-let arrayAfterUnShift = unshift(mainArray, 0);
-console.log(`array after pop value is :${[arrayAfterPop]} and deleted item is ${[deletedvalue]}`);
-console.log(`array after unshift value is :${arrayAfterUnShift}`);
+let [arrayAfterPop, deletedvalue] = popFromLastOfArray(mainArray);
+let arrayAfterUnShift = pushInFistOfArray(mainArray, 0);
+console.log(`after pop value from last of array :${[arrayAfterPop]} and deleted item is ${[deletedvalue]}`);
+console.log(`after push value in first of array :${arrayAfterUnShift}`);
