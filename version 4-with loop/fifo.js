@@ -19,7 +19,7 @@ function popFromLastOfArray(inputArray) {
 function pushInFistOfArray(inputArray, item) {
   let tempArray = [];
   tempArray[0] = item;
-  for (let i = 0; i <= inputArray.length; i++) {
+  for (let i = 0; i < inputArray.length; i++) {
     tempArray[i + 1] = inputArray[i];
   }
   return tempArray;
