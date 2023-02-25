@@ -27,5 +27,8 @@ function pushInFistOfArray(inputArray, item) {
 
 let [arrayAfterPop, deletedvalue] = popFromLastOfArray(mainArray);
 let arrayAfterpushInfirst = pushInFistOfArray(mainArray, 0);
-console.log(`after pop value from last of array :${[arrayAfterPop]} and deleted item is ${[deletedvalue]}`);
-console.log(`after push value in first of array :${arrayAfterpushInfirst}`);
+// console.log(`after pop value from last of array :${[arrayAfterPop]} and deleted item is ${[deletedvalue]}`);
+// console.log(`after push value in first of array :${arrayAfterpushInfirst}`);
+
+console.log("after pop value from last of array we have :", arrayAfterPop, " and deleted item is:", deletedvalue);
+console.log("after push value in first of array we have ", arrayAfterpushInfirst);
